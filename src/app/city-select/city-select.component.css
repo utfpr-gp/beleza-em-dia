@@ -1,7 +1,4 @@
 .select-city{
-  background: url('/assets/resources/images/gp.jpg') no-repeat;
-  background-size: cover; /*Css padrão*/
-  /* filter: brightness(70%); */
   padding: 13vmin 0;
   margin-bottom: 0px;
 }

@@ -8,13 +8,13 @@ import{ AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent implements AfterViewInit {
-  @ViewChild('mobile') sideNav?: ElementRef;
+export class AppComponent {
+  // @ViewChild('mobile') sideNav?: ElementRef;
 
   title = 'beleza-em-dia';
 
-  ngAfterViewInit(): void {
-    M.Sidenav.init(this.sideNav!.nativeElement);
-  }
+  // ngAfterViewInit(): void {
+  //   M.Sidenav.init(this.sideNav!.nativeElement);
+  // }
 
 }

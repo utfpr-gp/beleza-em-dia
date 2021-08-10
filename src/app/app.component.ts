@@ -1,6 +1,8 @@
 import * as M from 'materialize-css';
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 
+import{ AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,4 +11,9 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 
 export class AppComponent  {
   title = 'beleza-em-dia';
+
+  // ngAfterViewInit(): void {
+  //   M.Sidenav.init(this.sideNav!.nativeElement);
+  // }
+
 }

@@ -1,0 +1,14 @@
+.select-city{
+  padding: 13vmin 0;
+  margin-bottom: 0px;
+}
+.select-city label{
+  text-align: center;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+}
+.select-city .select-wrapper{
+  color: white;
+}
+

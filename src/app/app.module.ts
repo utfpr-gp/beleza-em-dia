@@ -1,20 +1,27 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { HomePageComponent } from './home-page/home-page.component';
-import { FeaturedItemComponent } from './featured-item/featured-item.component';
-import { AppRoutingModule } from './app-routing.module'
+import { CitySelectComponent } from './city-select/city-select.component';
+import { FooterComponent } from './footer/footer.component';
+import { MenuComponent } from './menu/menu.component';
+import { CompanySearchComponent } from './company-search/company-search.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomePageComponent,
-    FeaturedItemComponent
+    CitySelectComponent,
+    FooterComponent,
+    MenuComponent,
+    CompanySearchComponent
   ],
   imports: [
-
     BrowserModule,
-     AppRoutingModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

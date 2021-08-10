@@ -1,13 +1,9 @@
 <div class="row select-city" [ngStyle]="this.getBackgroundImage()">
-    <div class="container" >
-      <div class="input-field m6 xl4">
-        <select (change)="this.onSelectChange()">
-          <option value="1" disabled selected>Guarapuava</option>
-          <option value="2">Palmital</option>
-          <option value="3">Comuni. Cavaco</option>
-          <option value="4">Pinhão</option>
-        </select>
-        <label>Selecione uma cidade</label>
-      </div>
-    </div>
+  <div class="container" >
+    <label>Selecione uma cidade</label>
+    <select class="browser-default" [(ngModel)]="cityselect" (change)="this.onSelectChange()">
+      <option value="" selected>Escolha uma cidade</option>
+      <option [ngValue]="city" *ngFor="let city of cities">{{city.name}}</option>
+    </select>
+  </div>
 </div>

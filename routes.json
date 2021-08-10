@@ -1,0 +1,4 @@
+{
+  "/cidades": "/cities",
+  "/cidades/:id": "/cities/:id"
+}

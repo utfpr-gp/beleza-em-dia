@@ -1,14 +1,30 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
-declare var $: any;
+import { CityService } from '../services/city.service';
+import { City } from '../models/city';
 
 @Component({
   selector: 'app-city-select',
   templateUrl: './city-select.component.html',
   styleUrls: ['./city-select.component.css']
 })
-export class CitySelectComponent implements OnInit, AfterViewInit  {
+export class CitySelectComponent implements OnInit {
   imageURL: string = 'https://lorempixel.com/600/300/city/';
-  constructor() { }
+
+  cities!: City[];
+  cityselect!: City;
+
+  constructor(private cityService: CityService) {}
+
+  ngOnInit(){
+    this.getCities();
+  }
+
+  getCities() {
+    this.cityService.getCities().subscribe((cities: City[]) => {
+      this.cities = cities;
+      this.cityselect = cities[2];
+    });
+  }
 
   getBackgroundImage() {
     return {
@@ -20,12 +36,6 @@ export class CitySelectComponent implements OnInit, AfterViewInit  {
   }
 
   onSelectChange(){
-    this.imageURL = 'https://lorempixel.com/600/300/animals/';
+    this.imageURL = this.cityselect.image;
   }
-
-  ngAfterViewInit(): void {
-      $('select').formSelect();
-  }
-
-  ngOnInit(): void {}
 }

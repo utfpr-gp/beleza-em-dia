@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class CompanySearchComponent implements OnInit {
 
   constructor() { }
+  company = "UTFPR";
 
   ngOnInit(): void {
   }

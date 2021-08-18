@@ -21,5 +21,76 @@
       "cep": "852700000",
       "image": "https://res.cloudinary.com/dgueb0wir/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1621464679/cities/eom1oqbtvi9mwmap9rty.jpg"
     }
+],
+  "companies": [
+    {
+      "id": 1,
+      "name": "Salão da silvia",
+      "address": "Rua joão da graça",
+      "image": "https://res.cloudinary.com/dgueb0wir/image/upload/v1629251510/companies/salao-rose_hn675i.jpg",
+      "cityId": 1
+    },
+    {
+      "id": 2,
+      "name": "Barbearia do ze",
+      "address": "Rua XV de novembro",
+      "image": "https://res.cloudinary.com/dgueb0wir/image/upload/v1629251525/companies/sebrae_post227-1024x691_rwas7t.jpg",
+      "cityId": 2
+    },
+    {
+      "id": 3,
+      "name": "Manicure Patricia",
+      "address": "Rua cidade dos lagos",
+      "image": "https://res.cloudinary.com/dgueb0wir/image/upload/v1629251526/companies/Trabalhar-como-manicure-d%C3%A1-lucro_snk7on.jpg",
+      "cityId": 1
+    },
+    {
+      "id": 4,
+      "name": "Barbearia da josefina",
+      "address": "Rua dos carecas",
+      "image": "https://res.cloudinary.com/dgueb0wir/image/upload/v1629251563/companies/GettyImages-1158457201_tcp9nz.jpg",
+      "cityId": 3
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "description": "TRATAMENTOS PARA O CABELO"
+    },
+    {
+      "id": 2,
+      "description": "TRATAMENTOS PARA OS PÉS E MÃOS"
+    },
+    {
+      "id": 3,
+      "description": "TRATAMENTOS ESTÉTICOS CORPORAIS"
+    }
+],
+"services": [
+    {
+      "id": 1,
+      "description": "CORTES",
+      "categoryId": 1
+    },
+    {
+      "id": 2,
+      "description": "MECHAS",
+      "categoryId": 1
+    },
+    {
+      "id": 3,
+      "description": "CAUTERIZAÇÃO",
+      "categoryId": 1
+    },
+    {
+      "id": 4,
+      "description": "MANICURE",
+      "categoryId": 2
+    },
+    {
+      "id": 5,
+      "description": "PEDICURE",
+      "categoryId": 2
+    }
 ]
 }

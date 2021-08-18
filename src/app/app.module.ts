@@ -7,8 +7,10 @@ import { MenuComponent } from './menu/menu.component';
 import { CompanySearchComponent } from './company-search/company-search.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-
-
+import { FeaturedItemComponent } from './featured-item/featured-item.component';
+import { AppRoutingModule } from './app-routing.module';
+import { HomePageComponent } from './home-page/home-page.component';
+import { ServiceSearchComponent } from './service-search/service-search.component';
 
 @NgModule({
   declarations: [
@@ -16,12 +18,16 @@ import { FormsModule } from '@angular/forms';
     CitySelectComponent,
     FooterComponent,
     MenuComponent,
-    CompanySearchComponent
+    CompanySearchComponent,
+    FeaturedItemComponent,
+    HomePageComponent,
+    ServiceSearchComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Company } from '../models/company';
 declare var $: any;
 
 @Component ({
@@ -9,5 +10,17 @@ declare var $: any;
 export class HomePageComponent implements OnInit{
   constructor() { }
 
+  companies!: Company[];
+  amount!: number;
+  isShowService!: boolean;
   ngOnInit() {}
+
+  getCompanies(companies: Company[]){
+    this.amount = companies.length;
+    this.companies = companies;
+  }
+
+  showSearch(isShowService: boolean){
+    this.isShowService = isShowService;
+  }
 }

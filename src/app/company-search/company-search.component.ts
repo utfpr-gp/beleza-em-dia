@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { CompanyService } from '../services/company.service';
+import { Company } from '../models/company';
 
 @Component({
   selector: 'app-company-search',
@@ -7,10 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompanySearchComponent implements OnInit {
 
-  constructor() { }
-  company = "UTFPR";
+  company = "";
+  cityId = 0;
+  @Output() companies = new EventEmitter<Company[]>();
+  @Output() isShowService = new EventEmitter<boolean>();
+
+  constructor(private companyService: CompanyService) {}
 
   ngOnInit(): void {
   }
 
+  getCompany(){
+    this.cityId = parseInt(sessionStorage.getItem('cityId')!);
+    this.companyService.getCompanyByName(this.company, this.cityId).subscribe((companies: Company[]) => {
+      this.companies.emit(companies);
+    });
+  }
+
+  showService(){
+    this.isShowService.emit(true);
+  }
 }

@@ -1,0 +1,9 @@
+<div class="row select-city" [ngStyle]="this.getBackgroundImage()">
+  <div class="container" >
+    <label>Selecione uma cidade</label>
+    <select class="browser-default" [(ngModel)]="cityselect" (change)="this.onSelectChange()">
+      <option value="" selected>Escolha uma cidade</option>
+      <option [ngValue]="city" *ngFor="let city of cities">{{city.name}}</option>
+    </select>
+  </div>
+</div>

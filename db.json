@@ -1,0 +1,25 @@
+{
+  "cities": [
+    {
+      "id": 1,
+      "name": "Guarapuava",
+      "uf": "PR",
+      "cep": "852700000",
+      "image": "https://res.cloudinary.com/dgueb0wir/image/upload/v1621464643/cities/o7nqhpds5at6fjgkdinm.png"
+    },
+    {
+      "id": 2,
+      "name": "Palmital",
+      "uf": "PR",
+      "cep": "852700000",
+      "image": "https://res.cloudinary.com/dgueb0wir/image/upload/v1627849858/cities/palmital-pr_fz94uy.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Curitiba",
+      "uf": "PR",
+      "cep": "852700000",
+      "image": "https://res.cloudinary.com/dgueb0wir/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1621464679/cities/eom1oqbtvi9mwmap9rty.jpg"
+    }
+]
+}

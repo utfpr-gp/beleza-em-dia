@@ -1,3 +1,14 @@
 <app-city-select></app-city-select>
-<app-company-search (companies)="getCompanies($event)"></app-company-search>
+
+<app-company-search *ngIf="!this.isShowService" (companies)="getCompanies($event)" (isShowService)="showSearch($event)"></app-company-search>
+<app-service-search (isShowService)="showSearch($event)" *ngIf="this.isShowService"></app-service-search>
+
+<div class="row company-search m-0" *ngIf="amount > 0">
+  <div class="container">
+    <div class="input-field col s12 m-0">
+        <h5>{{amount}} itens encontrados</h5>
+    </div>
+  </div>
+</div>
+
 <app-featured-item *ngFor="let company of this.companies" [company] = "company"></app-featured-item>

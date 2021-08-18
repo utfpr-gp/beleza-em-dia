@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { FeaturedItemComponent } from './featured-item/featured-item.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomePageComponent } from './home-page/home-page.component';
+import { ServiceSearchComponent } from './service-search/service-search.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HomePageComponent } from './home-page/home-page.component';
     MenuComponent,
     CompanySearchComponent,
     FeaturedItemComponent,
-    HomePageComponent
+    HomePageComponent,
+    ServiceSearchComponent
   ],
   imports: [
     BrowserModule,

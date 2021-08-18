@@ -12,6 +12,7 @@ export class CompanySearchComponent implements OnInit {
   company = "";
   cityId = 0;
   @Output() companies = new EventEmitter<Company[]>();
+  @Output() isShowService = new EventEmitter<boolean>();
 
   constructor(private companyService: CompanyService) {}
 
@@ -23,5 +24,9 @@ export class CompanySearchComponent implements OnInit {
     this.companyService.getCompanyByName(this.company, this.cityId).subscribe((companies: Company[]) => {
       this.companies.emit(companies);
     });
+  }
+
+  showService(){
+    this.isShowService.emit(true);
   }
 }

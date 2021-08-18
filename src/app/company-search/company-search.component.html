@@ -4,8 +4,11 @@
       <input id="first_name" type="text" [(ngModel)] = "this.company" class="validate">
       <label for="first_name" [style.color]="'white'">Buscar Empresa Cadastrada</label>
     </div>
-    <button class="btn waves-effect waves-light" (click)="getCompany()">Submit
-      <i class="material-icons dp48">search</i>
-    </button>
+    <div class="input-field col s2 offset-s10">
+      <button class="btn waves-effect waves-light" (click)="getCompany()">BUSCAR
+      </button>
+    </div>
+    <br>
+    <a class="buscarServico" (click)="showService()">BUSCAR POR SERVIÇO</a>
   </div>
 </div>

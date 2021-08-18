@@ -22,7 +22,8 @@ export class CitySelectComponent implements OnInit {
   getCities() {
     this.cityService.getCities().subscribe((cities: City[]) => {
       this.cities = cities;
-      this.cityselect = cities[2];
+      this.cityselect = cities[0];
+      sessionStorage.setItem('cityId', this.cityselect.id.toString());
     });
   }
 
@@ -37,5 +38,6 @@ export class CitySelectComponent implements OnInit {
 
   onSelectChange(){
     this.imageURL = this.cityselect.image;
+    sessionStorage.setItem('cityId', this.cityselect.id.toString());
   }
 }

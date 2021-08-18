@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Company } from '../models/company';
 declare var $: any;
 
 @Component ({
@@ -9,5 +10,11 @@ declare var $: any;
 export class HomePageComponent implements OnInit{
   constructor() { }
 
+  companies!: Company[];
+
   ngOnInit() {}
+
+  getCompanies(companies: Company[]){
+    this.companies = companies;
+  }
 }

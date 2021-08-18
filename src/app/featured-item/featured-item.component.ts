@@ -1,5 +1,6 @@
 import * as M from 'materialize-css';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Company } from '../models/company';
 
 @Component({
   selector: 'app-featured-item',
@@ -7,24 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./featured-item.component.css']
 })
 export class FeaturedItemComponent implements OnInit {
-  name: string;
-  road: string;
-  number: string;
-  city: string;
-  state: string;
 
-  constructor() {
-    this.name = "Salão da Rose";
-    this.road = "Rua X";
-    this.number = "1234";
-    this.city = "Guarapuava";
-    this.state = "PR";
-  }
-
-  displayAddress(){
-    let address = this.road + ', ' + this.number + ' - ' + this.city + ' - ' + this.state;
-    return address;
-  }
+  @Input() company!: Company;
 
   ngOnInit(): void {}
 }

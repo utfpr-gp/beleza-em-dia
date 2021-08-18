@@ -1,4 +1,7 @@
 {
   "/cidades": "/cities",
-  "/cidades/:id": "/cities/:id"
+  "/cidades/:id": "/cities/:id",
+  "/empresas/": "/companies",
+  "/empresas/cidade/:id": "/companies?cityId=:id",
+  "/empresas?nome=:name&cidade=:id": "/companies?name_like=:name&cityId=:id"
 }

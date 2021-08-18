@@ -1,3 +1,3 @@
-<div class="container">
-<app-featured-item></app-featured-item>
-</div>
+<app-city-select></app-city-select>
+<app-company-search (companies)="getCompanies($event)"></app-company-search>
+<app-featured-item *ngFor="let company of this.companies" [company] = "company"></app-featured-item>

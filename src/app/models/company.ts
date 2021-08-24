@@ -4,5 +4,6 @@ export interface Company {
   address: string;
   image: string;
   cityId: number;
+  serviceIds: number[];
 }
 

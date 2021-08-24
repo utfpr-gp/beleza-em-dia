@@ -5,5 +5,9 @@
       <option value="" selected>Escolha uma cidade</option>
       <option [ngValue]="city" *ngFor="let city of cities">{{city.name}}</option>
     </select>
+
+    <div class="isShowCity">
+      <i class="material-icons" (click)="hideSelectCity()" style="font-size: 80px;">arrow_drop_up</i>
+    </div>
   </div>
 </div>

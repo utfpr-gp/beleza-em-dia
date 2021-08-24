@@ -28,28 +28,32 @@
       "name": "Salão da silvia",
       "address": "Rua joão da graça",
       "image": "https://res.cloudinary.com/dgueb0wir/image/upload/v1629251510/companies/salao-rose_hn675i.jpg",
-      "cityId": 1
+      "cityId": 1,
+      "serviceIds":[1,2]
     },
     {
       "id": 2,
       "name": "Barbearia do ze",
       "address": "Rua XV de novembro",
       "image": "https://res.cloudinary.com/dgueb0wir/image/upload/v1629251525/companies/sebrae_post227-1024x691_rwas7t.jpg",
-      "cityId": 2
+      "cityId": 2,
+      "serviceIds":[3,4]
     },
     {
       "id": 3,
       "name": "Manicure Patricia",
       "address": "Rua cidade dos lagos",
       "image": "https://res.cloudinary.com/dgueb0wir/image/upload/v1629251526/companies/Trabalhar-como-manicure-d%C3%A1-lucro_snk7on.jpg",
-      "cityId": 1
+      "cityId": 1,
+      "serviceIds":[5,1]
     },
     {
       "id": 4,
       "name": "Barbearia da josefina",
       "address": "Rua dos carecas",
       "image": "https://res.cloudinary.com/dgueb0wir/image/upload/v1629251563/companies/GettyImages-1158457201_tcp9nz.jpg",
-      "cityId": 3
+      "cityId": 3,
+      "serviceIds":[1,2]
     }
   ],
   "categories": [

@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, Output, EventEmitter} from '@angular/core';
 import { CityService } from '../services/city.service';
 import { City } from '../models/city';
 
@@ -12,6 +12,7 @@ export class CitySelectComponent implements OnInit {
 
   cities!: City[];
   cityselect!: City;
+  @Output() isShowCity = new EventEmitter<boolean>();
 
   constructor(private cityService: CityService) {}
 
@@ -22,7 +23,7 @@ export class CitySelectComponent implements OnInit {
   getCities() {
     this.cityService.getCities().subscribe((cities: City[]) => {
       this.cities = cities;
-      this.cityselect = cities[0];
+      this.cityselect = cities[parseInt(sessionStorage.getItem('cityId')!) - 1];
       sessionStorage.setItem('cityId', this.cityselect.id.toString());
     });
   }
@@ -39,5 +40,9 @@ export class CitySelectComponent implements OnInit {
   onSelectChange(){
     this.imageURL = this.cityselect.image;
     sessionStorage.setItem('cityId', this.cityselect.id.toString());
+  }
+
+  hideSelectCity(){
+    this.isShowCity.emit(true);
   }
 }

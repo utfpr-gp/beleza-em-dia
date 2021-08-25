@@ -31,6 +31,14 @@ export class CompanyService {
       )
   }
 
+  getCompanyByService(idCity: number, idService: number): Observable<Company[]>{
+    return this.httpClient.get<Company[]>(this.url + '/cidade/'+idCity+'/servico/'+idService)
+      .pipe(
+        retry(2),
+        catchError(this.handleError)
+      )
+  }
+
   getCompanyByName(name: String,idCity: number): Observable<Company[]>{
     if(name.length == 0)
       return  this.getCompanyByCity(idCity);

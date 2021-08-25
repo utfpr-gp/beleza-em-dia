@@ -1,0 +1,12 @@
+.company-search{
+  padding: 2vmin 0;
+  background-color: #7A8285;
+}
+button{
+  background-color: #033F7B!important;
+}
+.buscarServico{
+  color: #033F7B!important;
+  text-decoration: underline;
+  font-weight: 700;
+}

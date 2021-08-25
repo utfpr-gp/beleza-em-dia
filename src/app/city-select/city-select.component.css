@@ -1,6 +1,9 @@
 .select-city{
-  padding: 17vmin 0;
+  padding: 10vmin 0;
   margin-bottom: 0px;
+  width:100%;
+  height:220px;
+  position:relative;
 }
 .select-city label{
   text-align: center;
@@ -10,5 +13,12 @@
 }
 .select-city .select-wrapper{
   color: white;
+}
+
+.select-city .isShowCity{
+  color: white;
+  position:absolute;
+  bottom:0;
+  right: 20px;
 }
 

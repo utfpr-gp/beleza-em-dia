@@ -8,7 +8,10 @@
         <a>{{company.name}}</a>
       </span>
       <p>{{company.address}}</p>
-      <br />
+      <br/>
+
+      <div class="chip" *ngFor="let service of this.services" >{{service.description}}</div>
+
       <div class="center">
         <a class="blue darken-3 btn">Agendar Horario</a>
       </div>

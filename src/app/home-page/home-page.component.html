@@ -1,7 +1,8 @@
-<app-city-select></app-city-select>
+<app-city-select (isShowCity)="showCity($event)" *ngIf="!this.isShowCity"></app-city-select>
+<app-selected-city (isShowCity)="showCity($event)" *ngIf="this.isShowCity"></app-selected-city>
 
 <app-company-search *ngIf="!this.isShowService" (companies)="getCompanies($event)" (isShowService)="showSearch($event)"></app-company-search>
-<app-service-search (isShowService)="showSearch($event)" *ngIf="this.isShowService"></app-service-search>
+<app-service-search (isShowService)="showSearch($event)" *ngIf="this.isShowService" (companies)="getCompanies($event)"></app-service-search>
 
 <div class="row company-search m-0" *ngIf="amount > 0">
   <div class="container">

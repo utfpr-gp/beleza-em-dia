@@ -1,2 +1,27 @@
-<p>service-search works!</p>
-<a (click)="showCompany()">BUSCAR POR EMPRESA</a>
+<div class="row company-search mb-0">
+  <div class="container">
+    <div class="input-field col s12" style="font-size: 20px; color: white">
+      BUSQUE POR UM SERVIÇO
+    </div>
+    <div class="input-field col s12 mt-5">
+      <select class="browser-default" [(ngModel)]="category" (change)="this.onSelectChange()">
+        <option value="" selected>Selecione uma categoria</option>
+        <option [ngValue]="category" *ngFor="let category of categories">{{category.description}}</option>
+      </select>
+    </div>
+    <div class="input-field col s12 mt-5">
+        <select class="browser-default" [(ngModel)]="service">
+          <option [ngValue]="service" *ngFor="let service of services">{{service.description}}</option>
+        </select>
+    </div>
+    <div class="row">
+    <div class="input-field col s6">
+      <a class="buscarServico mt-3" (click)="showCompany()">BUSCAR POR EMPRESA</a>
+    </div>
+    <div class="input-field col s2 offset-s4">
+        <button class="btn waves-effect waves-light" (click)="getCompany()">BUSCAR
+        </button>
+    </div>
+    </div>
+  </div>
+</div>

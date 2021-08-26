@@ -13,6 +13,7 @@ export class HomePageComponent implements OnInit{
   companies!: Company[];
   amount!: number;
   isShowService!: boolean;
+  isShowCity!: boolean;
   ngOnInit() {}
 
   getCompanies(companies: Company[]){
@@ -22,5 +23,9 @@ export class HomePageComponent implements OnInit{
 
   showSearch(isShowService: boolean){
     this.isShowService = isShowService;
+  }
+
+  showCity(isShowCity: boolean){
+    this.isShowCity = isShowCity;
   }
 }

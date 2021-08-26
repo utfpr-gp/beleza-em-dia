@@ -1,0 +1,14 @@
+.selected-city{
+  background-color: #CDD0D5;
+  padding: 10px 0px;
+  overflow: hidden;
+  margin-bottom: 0px !important;
+  color: #033F7B!important;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.alterarCidade{
+  text-decoration: underline;
+  font-weight: 700;
+  color: #033F7B!important;
+}

@@ -11,6 +11,7 @@ import { FeaturedItemComponent } from './featured-item/featured-item.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ServiceSearchComponent } from './service-search/service-search.component';
+import { SelectedCityComponent } from './selected-city/selected-city.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ServiceSearchComponent } from './service-search/service-search.componen
     CompanySearchComponent,
     FeaturedItemComponent,
     HomePageComponent,
-    ServiceSearchComponent
+    ServiceSearchComponent,
+    SelectedCityComponent
   ],
   imports: [
     BrowserModule,
